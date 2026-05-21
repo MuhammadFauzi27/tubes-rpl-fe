@@ -7,42 +7,42 @@ import {
   LogOut, 
   Plus 
 } from 'lucide-react';
-import './Sidebar.css';
+import styles from './Sidebar.module.css';
 
-const Sidebar: React.FC = () => {
+const Sidebar = () => {
   return (
-    <aside className="sidebar">
-      <div className="sidebar-brand">
-        <h1>Kitchen Admin</h1>
+    <aside className={styles.sidebar}>
+      <div className={styles.brand}>
+        Kitchen Admin
       </div>
 
-      <nav className="sidebar-nav">
-        <a href="#" className="nav-item active">
+      <nav className={styles.nav}>
+        <a href="#" className={`${styles.navItem} ${styles.active}`}>
           <LayoutDashboard size={20} />
           <span>Dashboard</span>
         </a>
-        <a href="#" className="nav-item">
+        <a href="#" className={styles.navItem}>
           <ChefHat size={20} />
           <span>Live Orders</span>
         </a>
-        <a href="#" className="nav-item">
+        <a href="#" className={styles.navItem}>
           <BarChart3 size={20} />
           <span>Revenue Stats</span>
         </a>
       </nav>
 
-      <div className="sidebar-footer">
-        <button className="btn-new-order">
+      <div className={styles.footer}>
+        <button className={styles.newOrderBtn}>
           <Plus size={20} />
           <span>New Custom Order</span>
         </button>
         
-        <div className="footer-links">
-          <a href="#" className="nav-item">
+        <div className={styles.footerLinks}>
+          <a href="#" className={styles.navItem}>
             <HelpCircle size={20} />
             <span>Support</span>
           </a>
-          <a href="#" className="nav-item">
+          <a href="#" className={styles.navItem}>
             <LogOut size={20} />
             <span>Sign Out</span>
           </a>

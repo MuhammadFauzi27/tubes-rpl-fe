@@ -1,115 +1,122 @@
-.order-card {
+.card {
   background-color: var(--card-bg);
   border-radius: var(--border-radius-lg);
   padding: 24px;
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
   min-width: 320px;
   border-left: 4px solid transparent;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.order-header {
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
-.table-info h4 {
-  font-size: 18px;
-  font-weight: 700;
+.tableInfo h4 {
+  font-size: 20px;
+  font-weight: 800;
   margin-bottom: 4px;
+  color: var(--text-main);
 }
 
-.order-time {
+.orderTime {
   font-size: 13px;
   color: var(--text-muted);
+  font-weight: 500;
 }
 
-.status-badge {
+.statusBadge {
   font-size: 11px;
-  font-weight: 700;
-  padding: 4px 10px;
+  font-weight: 800;
+  padding: 6px 12px;
   border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.status-badge.status-preparing {
+.preparing {
   background-color: var(--status-preparing-bg);
   color: var(--status-preparing-text);
 }
 
-.status-badge.status-ready {
+.ready {
   background-color: var(--status-ready-bg);
   color: var(--status-ready-text);
 }
 
-.status-badge.status-served {
+.served {
   background-color: var(--status-served-bg);
   color: var(--status-served-text);
 }
 
-.order-items {
+.itemsList {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 16px 0;
-  border-bottom: 1px solid #f0f0f0;
+  gap: 14px;
+  padding: 4px 0;
 }
 
-.order-item {
+.item {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
+  font-weight: 500;
 }
 
-.item-details {
+.itemName {
   color: #555;
 }
 
-.item-price {
-  color: #888;
+.itemPrice {
+  color: #a0a0a0;
 }
 
-.order-footer {
+.footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: auto;
 }
 
-.order-total {
-  display: flex;
-  flex-direction: column;
-}
-
-.total-label {
-  display: none; /* Hide label as per screenshot if not needed, or style it */
-}
-
-.total-amount {
-  font-size: 18px;
-  font-weight: 700;
+.totalAmount {
+  font-size: 20px;
+  font-weight: 800;
   color: var(--text-main);
 }
 
-.action-btn {
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-weight: 600;
+.actionBtn {
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 700;
   font-size: 14px;
+  transition: opacity 0.2s;
 }
 
-.action-preparing {
+.actionBtn:hover {
+  opacity: 0.9;
+}
+
+.actionPreparing {
   background-color: #f5f5f5;
   color: #333;
 }
 
-.action-ready {
+.actionReady {
   background-color: #2ecc71;
   color: white;
 }
 
-.action-served {
+.actionServed {
   background-color: #1a1a1a;
   color: white;
 }

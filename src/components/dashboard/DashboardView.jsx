@@ -2,16 +2,15 @@ import React from 'react';
 import { Banknote, ShoppingCart, Clock } from 'lucide-react';
 import StatCard from './StatCard';
 import OrderCard from './OrderCard';
-import type { OrderStatus } from './OrderCard';
 import RevenueChart from './RevenueChart';
-import './DashboardView.css';
+import styles from './DashboardView.module.css';
 
-const DashboardView: React.FC = () => {
+const DashboardView = () => {
   const orders = [
     {
       tableNumber: '04',
       orderTime: '12 mins ago',
-      status: 'PREPARING' as OrderStatus,
+      status: 'PREPARING',
       items: [
         { name: 'Wagyu Burger', quantity: 1, price: 'Rp98.000' },
         { name: 'Truffle Fries', quantity: 2, price: 'Rp70.000' }
@@ -21,7 +20,7 @@ const DashboardView: React.FC = () => {
     {
       tableNumber: '12',
       orderTime: '25 mins ago',
-      status: 'READY' as OrderStatus,
+      status: 'READY',
       items: [
         { name: 'Lobster Ravioli', quantity: 3, price: 'Rp300.000' },
         { name: 'Pinot Noir', quantity: 1, price: 'Rp140.000' }
@@ -32,7 +31,7 @@ const DashboardView: React.FC = () => {
     {
       tableNumber: '08',
       orderTime: '45 mins ago',
-      status: 'SERVED' as OrderStatus,
+      status: 'SERVED',
       items: [
         { name: 'Margherita Pizza', quantity: 2, price: 'Rp150.000' }
       ],
@@ -41,7 +40,7 @@ const DashboardView: React.FC = () => {
     {
       tableNumber: '02',
       orderTime: '5 mins ago',
-      status: 'PREPARING' as OrderStatus,
+      status: 'PREPARING',
       items: [
         { name: "Chef's Special Tasting Menu (x2)", quantity: 1, price: '' }
       ],
@@ -51,8 +50,8 @@ const DashboardView: React.FC = () => {
   ];
 
   return (
-    <div className="dashboard-view">
-      <div className="stats-grid">
+    <div className={styles.view}>
+      <div className={styles.statsGrid}>
         <StatCard 
           icon={<Banknote size={24} />} 
           label="Today's Revenue" 
@@ -73,20 +72,20 @@ const DashboardView: React.FC = () => {
         />
       </div>
 
-      <div className="dashboard-main-grid">
-        <div className="live-orders-section">
-          <div className="section-header">
+      <div className={styles.mainGrid}>
+        <div className={styles.liveOrdersSection}>
+          <div className={styles.sectionHeader}>
             <h3>Live Orders</h3>
-            <button className="view-all-btn">View All</button>
+            <button className={styles.viewAllBtn}>View All</button>
           </div>
-          <div className="orders-grid">
+          <div className={styles.ordersGrid}>
             {orders.map((order, index) => (
               <OrderCard key={index} {...order} />
             ))}
           </div>
         </div>
 
-        <div className="charts-section">
+        <div className={styles.chartsSection}>
           <RevenueChart />
         </div>
       </div>

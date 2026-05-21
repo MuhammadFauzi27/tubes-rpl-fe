@@ -1,0 +1,59 @@
+.view {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.statsGrid {
+  display: flex;
+  gap: 32px;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 40px;
+  align-items: start;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.sectionHeader h3 {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.viewAllBtn {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 15px;
+  transition: opacity 0.2s;
+}
+
+.viewAllBtn:hover {
+  opacity: 0.8;
+}
+
+.ordersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 32px;
+}
+
+.chartsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media (max-width: 1400px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+}

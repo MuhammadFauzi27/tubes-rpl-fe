@@ -1,9 +1,9 @@
-.layout-container {
+.container {
   display: flex;
   min-height: 100vh;
 }
 
-.main-wrapper {
+.mainWrapper {
   flex: 1;
   margin-left: var(--sidebar-width);
   display: flex;
@@ -11,6 +11,6 @@
 }
 
 .content {
-  padding: 0 40px 40px 40px;
+  padding: 0 48px 48px 48px;
   flex: 1;
 }

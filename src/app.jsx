@@ -1,7 +1,13 @@
-import {AppRouter} from "./routes/appRouter.jsx"
+import React from 'react';
+import MainLayout from './components/layout/MainLayout';
+import DashboardView from './components/dashboard/DashboardView';
 
-export const App = () => {
+function App() {
   return (
-   <AppRouter/>
-  )
+    <MainLayout>
+      <DashboardView />
+    </MainLayout>
+  );
 }
+
+export default App;

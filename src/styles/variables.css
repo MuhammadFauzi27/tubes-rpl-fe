@@ -1,10 +1,10 @@
 :root {
-  /* Colors */
+  /* Colors - Based on the screenshot */
   --primary-color: #ff7a28;
-  --bg-color: #f5f6f8;
+  --bg-color: #fcfcfc;
   --card-bg: #ffffff;
   --text-main: #3d1b1b;
-  --text-muted: #8e8e8e;
+  --text-muted: #a0a0a0;
   
   /* Status Colors */
   --status-preparing-bg: #fff1e7;
@@ -17,13 +17,13 @@
   /* Layout */
   --sidebar-width: 260px;
   --header-height: 80px;
-  --border-radius-lg: 20px;
-  --border-radius-md: 12px;
+  --border-radius-lg: 24px;
+  --border-radius-md: 16px;
   --border-radius-sm: 8px;
   
-  /* Shadow */
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  /* Shadow - Soft and modern */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
 * {
@@ -42,5 +42,11 @@ body {
 button {
   cursor: pointer;
   border: none;
+  background: none;
   font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

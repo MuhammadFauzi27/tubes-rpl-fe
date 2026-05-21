@@ -1,8 +1,8 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
-import './RevenueChart.css';
+import styles from './RevenueChart.module.css';
 
-const RevenueChart: React.FC = () => {
+const RevenueChart = () => {
   const data = [
     { day: 'M', height: '40%' },
     { day: 'T', height: '60%' },
@@ -14,23 +14,23 @@ const RevenueChart: React.FC = () => {
   ];
 
   return (
-    <div className="revenue-chart-card">
-      <div className="chart-header">
+    <div className={styles.card}>
+      <div className={styles.header}>
         <h4>Revenue Trends</h4>
-        <div className="chart-filter">
+        <div className={styles.filter}>
           <span>Weekly</span>
-          <ChevronDown size={16} />
+          <ChevronDown size={18} />
         </div>
       </div>
 
-      <div className="chart-container">
+      <div className={styles.chartContainer}>
         {data.map((item, index) => (
-          <div key={index} className="chart-bar-wrapper">
+          <div key={index} className={styles.barWrapper}>
             <div 
-              className={`chart-bar ${item.active ? 'active' : ''}`} 
+              className={`${styles.bar} ${item.active ? styles.activeBar : ''}`} 
               style={{ height: item.height }}
             ></div>
-            <span className="chart-day">{item.day}</span>
+            <span className={styles.dayLabel}>{item.day}</span>
           </div>
         ))}
       </div>
