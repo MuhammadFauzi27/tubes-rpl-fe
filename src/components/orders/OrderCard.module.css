@@ -1,0 +1,142 @@
+.card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  border: 1px solid #f0f0f0;
+}
+
+.incomingBorder {
+  border-left: 5px solid #f1c40f;
+}
+
+.preparingBorder {
+  border-left: 5px solid #4a2c2c; /* Dark maroon/brown as seen in screenshot */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+}
+
+.tableName {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 2px;
+}
+
+.orderMeta {
+  font-size: 11px;
+  font-weight: 600;
+  color: #bbb;
+  text-transform: uppercase;
+}
+
+.priceContainer {
+  background-color: #fff4e5;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.price {
+  font-size: 14px;
+  font-weight: 800;
+  color: #b36b00;
+}
+
+.waitTime {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #f2f2f2;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #666;
+}
+
+.itemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.itemRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.quantity {
+  color: var(--primary-color);
+}
+
+.itemName {
+  color: var(--text-main);
+  flex: 1;
+}
+
+.checkIcon {
+  display: flex;
+  align-items: center;
+}
+
+.notes {
+  font-size: 12px;
+  color: #888;
+  background-color: #fafafa;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.actions {
+  margin-top: 4px;
+}
+
+.primaryBtn {
+  width: 100%;
+  background-color: #ff7a28;
+  color: white;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: opacity 0.2s;
+}
+
+.secondaryBtn {
+  width: 100%;
+  background-color: #ffcc66;
+  color: #3d1b1b;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.checkWrapper {
+  display: flex;
+  align-items: center;
+  gap: -4px; /* Slight overlap as in screenshot */
+}
+
+.checkWrapper svg:last-child {
+  margin-left: -8px;
+}

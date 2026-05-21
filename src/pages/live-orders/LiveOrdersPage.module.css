@@ -1,0 +1,11 @@
+.page {
+  padding: 32px 48px;
+  background-color: #fcfcfc;
+  min-height: calc(100vh - var(--header-height));
+}
+
+.board {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}

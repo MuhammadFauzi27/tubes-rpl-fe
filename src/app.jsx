@@ -1,11 +1,11 @@
 import React from 'react';
 import MainLayout from './components/layout/MainLayout';
-import DashboardView from './components/dashboard/DashboardView';
+import LiveOrdersPage from './pages/live-orders/LiveOrdersPage';
 
 function App() {
   return (
     <MainLayout>
-      <DashboardView />
+      <LiveOrdersPage />
     </MainLayout>
   );
 }

@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.title}>
-        <h2>Dashboard Overview</h2>
+        <h2>Dashboard Live Order</h2>
       </div>
       
       <div className={styles.actions}>

@@ -17,11 +17,11 @@ const Sidebar = () => {
       </div>
 
       <nav className={styles.nav}>
-        <a href="#" className={`${styles.navItem} ${styles.active}`}>
+        <a href="#" className={styles.navItem}>
           <LayoutDashboard size={20} />
           <span>Dashboard</span>
         </a>
-        <a href="#" className={styles.navItem}>
+        <a href="#" className={`${styles.navItem} ${styles.active}`}>
           <ChefHat size={20} />
           <span>Live Orders</span>
         </a>
