@@ -1,0 +1,46 @@
+:root {
+  /* Colors */
+  --primary-color: #ff7a28;
+  --bg-color: #f5f6f8;
+  --card-bg: #ffffff;
+  --text-main: #3d1b1b;
+  --text-muted: #8e8e8e;
+  
+  /* Status Colors */
+  --status-preparing-bg: #fff1e7;
+  --status-preparing-text: #ff7a28;
+  --status-ready-bg: #e7f7ed;
+  --status-ready-text: #2ecc71;
+  --status-served-bg: #f2f2f2;
+  --status-served-text: #333333;
+  
+  /* Layout */
+  --sidebar-width: 260px;
+  --header-height: 80px;
+  --border-radius-lg: 20px;
+  --border-radius-md: 12px;
+  --border-radius-sm: 8px;
+  
+  /* Shadow */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
